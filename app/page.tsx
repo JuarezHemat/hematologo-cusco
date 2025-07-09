@@ -1,51 +1,51 @@
-
 'use client';
+
 import Image from 'next/image';
-import fotoMedico from '../public/foto-medico.jpg';
 import { motion } from 'framer-motion';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center py-10 px-4">
-      <motion.h1 
-        className="text-4xl font-bold text-center text-gray-900 mb-4"
+    <main className="flex min-h-screen flex-col items-center justify-center px-4 py-12 text-center">
+      <Image
+        src="/logo-dr-juarez.png"
+        alt="Logo Dr. Alex Juárez"
+        width={160}
+        height={160}
+        className="mb-6"
+      />
+      
+      <motion.h1
+        className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1 }}
       >
-        ¡Hola y bienvenido al consultorio del Dr. Alex Juárez!
+        Bienvenido al consultorio del Dr. Alex Juárez
       </motion.h1>
-      
-      <motion.p 
-        className="text-lg text-center text-gray-700 max-w-2xl mx-auto"
+
+      <motion.p
+        className="text-lg md:text-xl text-gray-700 max-w-2xl"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
+        transition={{ delay: 0.5, duration: 1 }}
       >
-        Es un honor tenerte aquí. Soy especialista en Hematología, comprometido con brindar un diagnóstico preciso, tratamientos actualizados y un seguimiento personalizado para cada paciente. Mi enfoque combina la ciencia médica con una atención cálida y humana, porque sé que cada persona merece ser escuchada, comprendida y atendida con respeto.
-      </motion.p>
-      
-      <motion.p 
-        className="text-lg text-center text-gray-700 max-w-2xl mx-auto mt-2"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-      >
-        Gracias por confiar en mí. Estoy aquí para acompañarte en cada paso de tu salud.
+        Especialista en Hematología. Diagnóstico, tratamiento y seguimiento de enfermedades de la sangre con enfoque humano y profesional.
+        <br /><br />
+        Estoy encantado de darte la bienvenida a este espacio donde priorizamos tu salud con calidez y excelencia. Si tienes dudas, síntomas o necesitas un diagnóstico certero y acompañamiento confiable, estás en el lugar indicado.
       </motion.p>
 
       <motion.div
-        className="mt-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.9, duration: 1 }}
+        className="mt-10"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 1 }}
       >
         <Image
-          src={fotoMedico}
-          alt="Dr. Alex Juárez en su consultorio"
-          width={400}
-          height={400}
-          className="rounded-xl shadow-lg"
+          src="/foto-medico.jpg"
+          alt="Dr. Alex Juárez"
+          width={380}
+          height={380}
+          className="rounded-xl shadow-md"
         />
       </motion.div>
     </main>
