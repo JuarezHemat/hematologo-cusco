@@ -1,16 +1,53 @@
-import Image from "next/image";
 
-export default function HomePage() {
+'use client';
+import Image from 'next/image';
+import fotoMedico from '../public/foto-medico.jpg';
+import { motion } from 'framer-motion';
+
+export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-6 bg-white text-center">
-      <Image src="/logo.jpg" alt="Logo del Dr. Juárez" width={180} height={180} className="mb-6" />
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Bienvenido al consultorio del Dr. Alex Juárez</h1>
-      <p className="text-lg text-gray-600 max-w-2xl mb-8">
-        Especialista en Hematología. Diagnóstico, tratamiento y seguimiento de enfermedades de la sangre con enfoque humano y profesional.
-      </p>
-      <div className="w-full max-w-md">
-        <Image src="/foto-medico.png" alt="Dr. Alex Juárez en su consultorio" width={600} height={400} className="rounded-lg shadow-lg mx-auto" />
-      </div>
+    <main className="flex flex-col items-center justify-center py-10 px-4">
+      <motion.h1 
+        className="text-4xl font-bold text-center text-gray-900 mb-4"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        ¡Hola y bienvenido al consultorio del Dr. Alex Juárez!
+      </motion.h1>
+      
+      <motion.p 
+        className="text-lg text-center text-gray-700 max-w-2xl mx-auto"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3, duration: 0.8 }}
+      >
+        Es un honor tenerte aquí. Soy especialista en Hematología, comprometido con brindar un diagnóstico preciso, tratamientos actualizados y un seguimiento personalizado para cada paciente. Mi enfoque combina la ciencia médica con una atención cálida y humana, porque sé que cada persona merece ser escuchada, comprendida y atendida con respeto.
+      </motion.p>
+      
+      <motion.p 
+        className="text-lg text-center text-gray-700 max-w-2xl mx-auto mt-2"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.6, duration: 0.8 }}
+      >
+        Gracias por confiar en mí. Estoy aquí para acompañarte en cada paso de tu salud.
+      </motion.p>
+
+      <motion.div
+        className="mt-8"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 1 }}
+      >
+        <Image
+          src={fotoMedico}
+          alt="Dr. Alex Juárez en su consultorio"
+          width={400}
+          height={400}
+          className="rounded-xl shadow-lg"
+        />
+      </motion.div>
     </main>
   );
 }
