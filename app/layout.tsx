@@ -11,11 +11,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="text-xl font-bold text-red-700">Dr. Alex Juárez</div>
           <nav className="space-x-4 text-sm sm:text-base font-medium text-gray-700">
             <Link href="/"><span className="hover:text-red-600 cursor-pointer">Inicio</span></Link>
-            <Link href="/#sobre-mi"><span className="hover:text-red-600 cursor-pointer">Sobre mí</span></Link>
-            <Link href="/#servicios"><span className="hover:text-red-600 cursor-pointer">Servicios</span></Link>
-            <Link href="/#testimonios"><span className="hover:text-red-600 cursor-pointer">Testimonios</span></Link>
+            <Link href="/sobre-mi"><span className="hover:text-red-600 cursor-pointer">Sobre mí</span></Link>
+            <Link href="/servicios"><span className="hover:text-red-600 cursor-pointer">Servicios</span></Link>
+            <Link href="/testimonios"><span className="hover:text-red-600 cursor-pointer">Testimonios</span></Link>
             <Link href="/blog"><span className="hover:text-red-600 cursor-pointer">Blog</span></Link>
-            <Link href="/#contacto"><span className="hover:text-red-600 cursor-pointer">Contacto</span></Link>
+            <Link href="/contacto"><span className="hover:text-red-600 cursor-pointer">Contacto</span></Link>
           </nav>
         </header>
 
