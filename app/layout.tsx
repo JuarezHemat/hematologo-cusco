@@ -1,10 +1,27 @@
 import './globals.css'
 import { ReactNode } from 'react'
 import Link from 'next/link'
+import Script from 'next/script' // 👈 Importa Script
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es">
+      <head>
+        {/* Etiqueta de Google Analytics */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-9P7X8ZW6BT"
+        />
+        <Script id="gtag-init">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9P7X8ZW6BT');
+          `}
+        </Script>
+      </head>
+
       <body className="relative">
         {/* NAVBAR */}
         <header className="fixed top-0 left-0 right-0 z-40 bg-white shadow-md py-4 px-6 flex justify-between items-center">
