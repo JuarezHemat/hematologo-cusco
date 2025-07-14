@@ -14,7 +14,7 @@ export default function Home() {
           </a>
         </p>
         <p className="text-gray-700">
-          📱 <a href="https://wa.me/51988115128" className="text-green-600 underline">+51 988 115 128 (WhatsApp)</a>
+          📱 <a href="https://wa.me/51922177447" className="text-green-600 underline">+51 922 177 447 (WhatsApp)</a>
         </p>
         <p className="text-gray-700">
           📱 <a href="https://wa.me/51930914415" className="text-green-600 underline">+51 930 914 415 (WhatsApp)</a>
